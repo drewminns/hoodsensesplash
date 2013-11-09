@@ -1,0 +1,28 @@
+!!!
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Hoodsense
+    %meta{:content => "rent smarter. rest easy.", :name => "description"}/
+    %meta{:content => "Hoodsense, Rental, Apartment, Landlord, Tenant, Rent, Apartment Rental, Apartment review, bedbug, neighbourhood search", :name => "keywords"}/
+    %meta{:content => "Hoodsense", :name => "author"}/
+    %meta{:content => "index, follow", :name => "robots"}/
+    %meta{:content => "Hoodsense", :property => "og:title"}/
+    %meta{:content => "http://hoodsense.com/images/hoodsensefbicon.jpg", :property => "og:image"}/
+    %meta{:content => "Hoodsense", :property => "og:site_name"}/
+    %meta{:content => "rent smarter. rest easy.", :property => "og:description"}/
+    %meta{:content => "website", :property => "og:type"}/
+    %meta{:content => "http://hoodsense.com", :property => "og:url"}/
+    %meta{:content => "1378155159095180", :property => "fb:app_id"}/
+    %link{:href => "#{asset_path('favicon.png')}", :rel => "shortcut icon"}/
+    %link{:href => "#{asset_path('favicon.png')}", :rel => "apple-itouch-icon"}/
+    / Stylesheets
+    = stylesheet_link_tag    "application", media: "screen", "data-turbolinks-track" => true
+    = stylesheet_link_tag    "application-print", media: "print", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    /[if lt IE 9]
+      <script src="js/html5shiv.js"></script>
+  %body
+    = yield

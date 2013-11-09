@@ -1,0 +1,35 @@
+#fb-root
+:javascript
+  (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1378155159095180";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+.container
+  #content
+    .cta
+      .logo Hoodsense
+      %h1 rent smarter. rest easy.
+    .signup
+      #mc_embed_signup
+        %form#mc-embedded-subscribe-form.validate{:action => "http://hoodsense.us3.list-manage.com/subscribe/post?u=8fbbb2cd630e4a687affcddf8&amp;id=856655f2f2", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
+          %label{:for => "mce-EMAIL"} sign up to know when we launch
+          %input#mce-EMAIL.email{:name => "EMAIL", :placeholder => "email address", :required => "", :type => "email", :value => ""}/
+          .clear
+            %input#mc-embedded-subscribe.button{:name => "subscribe", :type => "submit", :value => "Subscribe"}/
+    %p.meta
+    .fb-like{"data-action" => "like", "data-colorscheme" => "light", "data-href" => "https://www.facebook.com/hoodsense", "data-layout" => "standard", "data-share" => "false", "data-show-faces" => "true", "data-width" => "250"}
+    %p.meta copyright 2013 Hoodsense
+    %p.meta
+      general inquiries?
+      %a{:href => "mailto:howdy@hoodsense.com"} contact us
+:javascript
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45550925-1', 'hoodsense.com');
+  ga('send', 'pageview');
