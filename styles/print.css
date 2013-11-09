@@ -1,0 +1,64 @@
+a:link {
+  color: #f7e543;
+  text-decoration: none;
+}
+a:hover {
+  color: #b3a208;
+  text-decoration: none;
+}
+a:visited {
+  color: #f7e543;
+  text-decoration: none;
+}
+p {
+  font-size: 1em;
+  margin-bottom: 1.5em;
+  line-height: 1.5em;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Montserrat', 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.5em;
+}
+h1 {
+  font-size: 2.3em;
+}
+h2 {
+  font-size: 1.8em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.2em;
+}
+@page  {
+  margin: 0.5cm;
+}
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.3em;
+}
+nav#topnav {
+  display: none;
+}
+section#gallery ul li {
+  float: left;
+  display: inline-block;
+  width: 45%;
+  margin: 0 2.475%;
+}
+section#contact {
+  display: none;
+}
+footer#footer {
+  display: none;
+}
