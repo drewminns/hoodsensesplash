@@ -28,11 +28,11 @@ class RegistrantsController < ApplicationController
 
     respond_to do |format|
       if @registrant.save
+        format.js
         format.html { redirect_to root_url, notice: 'You have been added, check your email to confirm your addition.' }
-        format.json { render action: 'show', status: :created, location: @registrant }
       else
-        format.html { render action: 'new' }
-        format.json { render json: @registrant.errors, status: :unprocessable_entity }
+        format.js {render action: 'create_failure'}
+        format.html { redirect_to root_url }
       end
     end
   end

@@ -1,0 +1,4 @@
+var error_msg=$("<div id='error'><p>Hmmm, that didn't work.</p>" +
+    "<p>Mind trying again?</p></br></br></div>").hide().fadeIn(200).fadeOut(5000);
+$('#error').replaceWith(error_msg)
+$('#registrant_email').val('');

@@ -1,4 +1,5 @@
 #signup-partial.signup
-  = simple_form_for @registrant do |f|
+  #error
+  = simple_form_for @registrant, html: { "data-remote" => true } do |f|
     = f.input :email, input_html: { class: 'email' }, label: 'sign up to know when we launch', placeholder: 'email address'
     = f.button :submit, 'Subscribe'
