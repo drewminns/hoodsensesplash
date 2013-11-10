@@ -4,14 +4,14 @@
 
 
 @font-face {
-    font-family: 'montserratbold';
-    src: font-url('montserrat-bold-webfont.eot');
-    src: font-url('montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('montserrat-bold-webfont.woff') format('woff'),
-         font-url('montserrat-bold-webfont.ttf') format('truetype'),
-         font-url('montserrat-bold-webfont.svg#montserratbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'montserratbold';
+  src: font-url('montserrat-bold-webfont.eot');
+  src: font-url('montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  font-url('montserrat-bold-webfont.woff') format('woff'),
+  font-url('montserrat-bold-webfont.ttf') format('truetype'),
+  font-url('montserrat-bold-webfont.svg#montserratbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
 
 }
 
@@ -91,31 +91,32 @@ p.meta {
     &:hover {
       background: #17846f;
       -webkit-transition: background-color 200ms linear;
-     -moz-transition: background-color 200ms linear;
-     -o-transition: background-color 200ms linear;
-     -ms-transition: background-color 200ms linear;
-     transition: background-color 200ms linear;
+      -moz-transition: background-color 200ms linear;
+      -o-transition: background-color 200ms linear;
+      -ms-transition: background-color 200ms linear;
+      transition: background-color 200ms linear;
     }
   }
-  #message {
-	font-size: 1.3em;
-  }
+}
+
+#message {
+  font-size: 1.3em;
 }
 
 ::-webkit-input-placeholder {
-   color: #888;
+  color: #888;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #888;  
+  color: #888;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #888;  
+  color: #888;
 }
 
-:-ms-input-placeholder {  
-   color: #888;  
+:-ms-input-placeholder {
+  color: #888;
 }
 
 @media only screen and (max-width: 600px) {
@@ -123,67 +124,71 @@ p.meta {
   body {
     background-image: image-url('background.jpg');
     background-size: auto;
-  }  
+  }
 
   .container {
     width: 100%;
   }
 
-#content {
-  background-color: rgba(2,2,2,0.7);
-  padding: 40px 10px;
-}
+  #content {
+    background-color: rgba(2,2,2,0.7);
+    padding: 40px 10px;
+  }
 
-.cta {
-  width: 100%;
-  margin: 0 auto;
-  .logo {
-    text-indent: -99999px;
-    background-image: image-url('logos/hoodsenselogo@2x.png');
-    background-size: 300px 44px;
-    height: 44px;
-    width: 300px;
-    margin: 0 auto 10px auto;
-  }
-}
-
-.signup {
-  margin: 50px 0px;
-  label {
-    display: block;
-    font-size: 1.2em;
-  }
-  input[type="email"] {
-    width: 300px;
-    padding: 15px 10px;
-    margin: 10px 0;
-    font-family: @bodyfont;
-    font-size: 1.3em;
-    border: 0;
-    text-align: center;
-    background-color: rgba(255,255,255,0.7);
-  }
-  input[type="submit"] {
-    border-radius: 5px;
-    border: 0;
-    width: 300px;
-    padding: 10px 0px;
-    font-family: @bodyfont;
-    text-transform: lowercase;
-    background: #16a085;
-    color: #fff;
-    font-size: 1.2em;
-    cursor: pointer;
-    -webkit-appearance: none;
-    &:hover {
-      background: #17846f;
-      -webkit-transition: background-color 200ms linear;
-     -moz-transition: background-color 200ms linear;
-     -o-transition: background-color 200ms linear;
-     -ms-transition: background-color 200ms linear;
-     transition: background-color 200ms linear;
+  .cta {
+    width: 100%;
+    margin: 0 auto;
+    .logo {
+      text-indent: -99999px;
+      background-image: image-url('logos/hoodsenselogo@2x.png');
+      background-size: 300px 44px;
+      height: 44px;
+      width: 300px;
+      margin: 0 auto 10px auto;
     }
   }
-}
+
+  .signup {
+    margin: 50px 0px;
+    label {
+      display: block;
+      font-size: 1.2em;
+    }
+    input[type="email"] {
+      width: 300px;
+      padding: 15px 10px;
+      margin: 10px 0;
+      font-family: @bodyfont;
+      font-size: 1.3em;
+      border: 0;
+      text-align: center;
+      background-color: rgba(255,255,255,0.7);
+    }
+    input[type="submit"] {
+      border-radius: 5px;
+      border: 0;
+      width: 300px;
+      padding: 10px 0px;
+      font-family: @bodyfont;
+      text-transform: lowercase;
+      background: #16a085;
+      color: #fff;
+      font-size: 1.2em;
+      cursor: pointer;
+      -webkit-appearance: none;
+      &:hover {
+        background: #17846f;
+        -webkit-transition: background-color 200ms linear;
+        -moz-transition: background-color 200ms linear;
+        -o-transition: background-color 200ms linear;
+        -ms-transition: background-color 200ms linear;
+        transition: background-color 200ms linear;
+      }
+    }
+  }
+
+  #message {
+    font-size: 1.3em;
+  }
 
 }
