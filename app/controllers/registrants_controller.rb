@@ -10,6 +10,7 @@ class RegistrantsController < ApplicationController
       if @registrant.save
         format.js
         format.html { redirect_to root_url, notice: 'You have been added, check your email to confirm your addition.' }
+        RegistrationMailer.confirmation_email(@registrant).deliver
       else
         format.js {render action: 'create_failure'}
         format.html { redirect_to root_url }

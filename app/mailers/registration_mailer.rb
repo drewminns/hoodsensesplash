@@ -3,6 +3,7 @@ class RegistrationMailer < ActionMailer::Base
 
   def confirmation_email(registrant)
     @registrant = registrant
-    @url =
+    @url = "#{confirm_registrant_url(@registrant)}?code=#{@registrant.confirmation_code}"
+    mail(to: @registrant.email, subject: 'HoodSense: Knock, Knock!')
   end
 end

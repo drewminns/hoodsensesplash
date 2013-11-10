@@ -22,5 +22,6 @@ module Hoodsensesplash
 
     config.app_generators.stylesheet_engine :less
 
+    config.action_mailer.default_url_options = { host: 'hoodsense.com' }
   end
 end
