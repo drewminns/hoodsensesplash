@@ -7,7 +7,11 @@ Hoodsensesplash::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  resources :registrants
+  resources :registrants, only: [:create, :confirm] do
+    member do
+      get 'confirm'
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

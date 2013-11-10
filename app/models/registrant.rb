@@ -11,6 +11,7 @@ class Registrant < ActiveRecord::Base
   def set_confirm_fields
     if self.new_record?
       self.is_confirmed=false
+      self.sent=false
       begin
         self.confirmation_code=rand(36**24).to_s(36)
       end while Registrant.where(:confirmation_code => self.confirmation_code).count != 0

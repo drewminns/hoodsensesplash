@@ -1,7 +1,7 @@
-var error_msg=$("<div id='error'><p>Hmmm, that didn't work.</p>" +
+var error_msg=$("<div id='message'><p>Hmmm, that didn't work.</p>" +
     <% @registrant.errors.full_messages.each do |msg| %>
       "<p><%= msg %></p>" +
     <% end %>
     "<p>Mind trying again?</p></br></br></div>").hide().fadeIn(200).fadeOut(5000);
-$('#error').replaceWith(error_msg)
+$('#message').replaceWith(error_msg)
 $('#registrant_email').val('');

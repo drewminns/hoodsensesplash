@@ -1,30 +1,10 @@
 class RegistrantsController < ApplicationController
-  before_action :set_registrant, only: [:show, :edit, :update, :destroy]
-
-  # GET /registrants
-  # GET /registrants.json
-  def index
-    @registrants = Registrant.all
-  end
-
-  # GET /registrants/1
-  # GET /registrants/1.json
-  def show
-  end
-
-  # GET /registrants/new
-  def new
-    @registrant = Registrant.new
-  end
-
-  # GET /registrants/1/edit
-  def edit
-  end
+  before_action :set_registrant, only: [:confirm]
 
   # POST /registrants
   # POST /registrants.json
   def create
-    @registrant = Registrant.new(registrant_params)
+    @registrant = Registrant.new(registrant_create_params)
 
     respond_to do |format|
       if @registrant.save
@@ -37,11 +17,24 @@ class RegistrantsController < ApplicationController
     end
   end
 
+  def confirm
+    if @registrant.nil?
+      render action: 'confirm_failure'
+    else
+      @registrant.is_confirmed=true
+      if @registrant.save
+        render action: 'confirm'
+      else
+        render action: 'confirm_failure'
+      end
+    end
+  end
+
   # PATCH/PUT /registrants/1
   # PATCH/PUT /registrants/1.json
   def update
     respond_to do |format|
-      if @registrant.update(registrant_params)
+      if @registrant.update(registrant_create_params)
         format.html { redirect_to @registrant, notice: 'registrant was successfully updated.' }
         format.json { head :no_content }
       else
@@ -51,24 +44,14 @@ class RegistrantsController < ApplicationController
     end
   end
 
-  # DELETE /registrants/1
-  # DELETE /registrants/1.json
-  def destroy
-    @registrant.destroy
-    respond_to do |format|
-      format.html { redirect_to registrants_url }
-      format.json { head :no_content }
-    end
-  end
-
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_registrant
-    @registrant = registrant.find(params[:id])
+    @registrant = Registrant.where("id=? and confirmation_code=?", params[:id], params[:code]).first
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def registrant_params
+  def registrant_create_params
     params.require(:registrant).permit(:email)
   end
 end
