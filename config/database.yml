@@ -32,8 +32,8 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: hoodsensesplash_production
+  database: <%= ENV['RAILS_DB_NAME'] %>
   pool: 5
-  username: root
-  password:
+  username: <%= ENV['RAILS_DB_USER'] %>
+  password: <%= ENV['RAILS_DB_PWD'] %>
   socket: /tmp/mysql.sock
