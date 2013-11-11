@@ -42,6 +42,7 @@ gem 'therubyracer' # Ruby
 # Use unicorn as the app server
 # gem 'unicorn'
 
+# Environment variable manager
 gem 'dotenv-rails', :groups => [:development, :test, :production]
 
 # Use Capistrano for deployment

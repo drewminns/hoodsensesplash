@@ -14,5 +14,12 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Rubymine setup files
 .idea
+
+# Vendor bundles
 vendor/ruby
+
+# Environment variables
+.env

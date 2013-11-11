@@ -36,4 +36,4 @@ production:
   pool: 5
   username: <%= ENV['RAILS_DB_USER'] %>
   password: <%= ENV['RAILS_DB_PWD'] %>
-  socket: /tmp/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
