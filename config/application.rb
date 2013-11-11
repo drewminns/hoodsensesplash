@@ -23,5 +23,8 @@ module Hoodsensesplash
     config.app_generators.stylesheet_engine :less
 
     config.action_mailer.default_url_options = { host: 'hoodsense.com' }
+
+    config.assets.precompile += ['application-print.css']
+
   end
 end

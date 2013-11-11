@@ -23,3 +23,6 @@ vendor/ruby
 
 # Environment variables
 .env
+
+# Ignore assets
+public/assets/
