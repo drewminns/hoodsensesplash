@@ -56,6 +56,7 @@ gem "haml-rails"
 gem "simple_form"
 gem "high_voltage"
 group :development, :test do
+  gem "sqlite3"
   gem "pry"
   gem "pry-nav"
   gem "html2haml"
